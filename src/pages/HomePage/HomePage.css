@@ -1,0 +1,67 @@
+/* Styles for the homepage grid container */
+.homeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    gap: 20px; /* Space between the columns and rows */
+    padding: 20px; /* Padding around the entire grid for some breathing room */
+    margin: auto;
+    max-width: 1200px; /* Maximum width of the grid to ensure it does not stretch too wide on larger screens */
+    align-items: stretch; /* Ensures that all the child elements stretch to fill the container */
+}
+
+
+/* General style for section headings */
+.homeGrid h2 {
+    text-align: center;  /* Centers the heading */
+    color: #333;        /* Sets a uniform text color */
+    margin-top: 0;      /* Removes top margin for tight spacing */
+    margin-bottom: 20px; /* Adds space below the heading */
+    padding: 10px;      /* Optional padding for the heading */
+    background-color: #f8f8f8; /* Gives a subtle background color */
+    border-radius: 4px; /* Slightly rounds corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+
+/* Unified styles for all sections in the grid */
+.gridRappers, .gridBlogs, .gridEvents, .blogPosts, .upcomingEvents {
+    background: #fff; /* White background for each section */
+    border: 1px solid #ddd; /* Light gray border for some definition */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    padding: 15px; /* Padding inside each grid section */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for some depth */
+    display: flex;
+    flex-direction: column; /* Stack content vertically within each section */
+    margin-top: 20px; /* Top margin for separation */
+    flex: 1; /* Makes each section flexibly fill the available space */
+}
+
+/* Headings inside grid sections for clarity and emphasis */
+.gridRappers h2, .gridBlogs h2, .gridEvents h2, .blogPosts h2, .upcomingEvents h2 {
+    margin-top: 0;
+    color: #333; /* Darker text for better readability */
+}
+
+/* Styles for individual items within sections */
+.blogPost, .event {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* No bottom border for the last item in each section */
+.blogPost:last-child, .event:last-child {
+    border-bottom: none;
+}
+
+/* Styling for smaller titles within the sections */
+h3 {
+    color: #555;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .homeGrid {
+        grid-template-columns: 1fr; /* Stack columns into a single column on smaller screens */
+    }
+}

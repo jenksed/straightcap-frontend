@@ -1,0 +1,34 @@
+/* src/pages/Artists/Artists.css */
+.artistsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .rapperCard {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+  
+  .rapperCard h2 {
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* Ensures readability against potentially bright or complex backgrounds */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0; /* Adds spacing inside the text area */
+    margin: 0; /* Removes default margins */
+  }
+  

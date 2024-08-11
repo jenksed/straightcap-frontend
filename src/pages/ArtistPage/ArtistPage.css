@@ -1,0 +1,81 @@
+.artistPageContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Image on the left, content on the right */
+    grid-template-areas:
+      "image header"
+      "image bio"
+      "music music";
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff; /* Adds a clean background color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  }
+  
+  .artistHeader {
+    grid-area: header;
+    align-self: end;
+    font-size: 2em; /* Larger font size for artist name */
+    color: #333; /* Darker text for contrast */
+    padding-bottom: 0.5em; /* Spacing below the artist name */
+  }
+  
+  .artistImage {
+    grid-area: image;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for the image */
+  }
+  
+  .artistBio {
+    grid-area: bio;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1em; /* Slightly larger font for readability */
+    line-height: 1.6; /* Improved line spacing for readability */
+    color: #444; /* Slightly darker text for better readability */
+  }
+  
+  .musicSection {
+    grid-area: music;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .musicLinks a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #0056b3; /* Brighter color for links for better visibility */
+    font-weight: bold; /* Makes links bold */
+    margin-bottom: 10px; /* Adds space between links */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .artistPageContainer {
+      grid-template-columns: 1fr; /* Stack content vertically on small screens */
+      grid-template-areas:
+        "header"
+        "image"
+        "bio"
+        "music";
+    }
+  
+    .artistHeader {
+      align-self: center; /* Center the name when stacked */
+      padding-top: 20px; /* Adds space above the artist name */
+    }
+  
+    .artistImage {
+      max-width: 90%; /* Makes the image larger on smaller screens */
+      margin: auto; /* Center the image */
+    }
+  }
+  
