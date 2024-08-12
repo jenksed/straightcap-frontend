@@ -1,0 +1,64 @@
+/* Toolbar.css */
+:root {
+    --toolbar-background: #fff; /* Change background to white */
+    --toolbar-border-color: #CAB8FF;
+    --toolbar-text-color: #333; /* Adjust text color for white background */
+    --toolbar-input-background: #f0f0f0; /* Lighter input background for contrast */
+    --toolbar-input-border-color: #ccc; /* Lighter border color for contrast */
+    --toolbar-input-placeholder-color: #aaa; /* Adjust placeholder color for contrast */
+    --toolbar-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for white background */
+}
+
+/* Toolbar container */
+.toolbar {
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch; 
+    gap: 20px; 
+    padding: 20px; 
+    background-color: var(--toolbar-background); 
+    border-radius: 10px; 
+    box-shadow: var(--toolbar-shadow); 
+
+    /* Stretch to full height */
+    height: 100%; /* Or use min-height: 100vh if you want it to always be at least the viewport height */
+}
+
+/* Search box styling */
+.searchBox {
+    width: 100%; 
+}
+
+.searchBox input {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid var(--toolbar-border-color);
+    border-radius: 5px; 
+    background-color: var(--toolbar-input-background);
+    color: var(--toolbar-text-color); 
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Add shadow transition */
+}
+
+.searchBox input::placeholder {
+    color: var(--toolbar-input-placeholder-color);
+}
+
+.searchBox input:focus {
+    outline: none;
+    border: 1px solid var(--toolbar-border-color); 
+    box-shadow: 0 0 0 2px var(--toolbar-border-color); /* Add subtle glow on focus */
+}
+
+/* Responsive padding adjustments (optional) */
+@media (max-width: 767px) {
+    .toolbar {
+        padding: 15px; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .toolbar {
+        padding: 25px; 
+    }
+}

@@ -1,0 +1,36 @@
+/* ArtistPageTemplate.css */
+
+.artistPageTemplate {
+    display: flex;
+    flex-direction: column; /* Arrange header and content vertically on smaller screens */
+    gap: 2rem; /* Add spacing between header and content */
+  }
+  
+  .artistHeader {
+    text-align: center; /* Center the artist name */
+  }
+  
+  .artistHeader h2 {
+    margin-top: 1rem; /* Add some space above the name */
+  }
+  
+  .artistContent {
+    /* Add styling for the content area as needed */
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 768px) { /* Adjust breakpoint as needed */
+    .artistPageTemplate {
+      flex-direction: row; /* Arrange header and content side-by-side on larger screens */
+    }
+  
+    .artistHeader {
+      flex: 0 0 300px; /* Set a fixed width for the header */
+      margin-right: 2rem; /* Add space between header and content */
+    }
+  
+    .artistContent {
+      flex: 1; /* Allow the content area to grow and take available space */
+    }
+  }
+  

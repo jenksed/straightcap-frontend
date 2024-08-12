@@ -1,0 +1,71 @@
+:root {
+    --primary-background: #282c34;
+    --off-white: #F5F5F5; 
+    --dark-background: #3B2A5D;
+    --light-background: #F5F5F5; 
+    --card-hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Define hover shadow for reuse */
+}
+
+/* Container for all artist cards */
+.artistsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns with min width */
+    grid-gap: 2rem; /* Increased gap for better visual separation */
+    padding: 2rem; /* Increased padding for more breathing room */
+    background-color: var(--primary-background);
+}
+
+/* Individual rapper card styles */
+.rapperCard {
+    height: 300px; /* Increased height for larger images and text */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--dark-background); /* Fallback color if image fails to load */
+    color: var(--off-white);
+    text-decoration: none;
+    border-radius: 1rem; /* Larger border radius for a softer look */
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtler initial shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Style the artist name */
+.rapperCard h2 {
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Gradient for smoother transition */
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0; /* Increased padding for better readability */
+    margin: 0;
+    color: var(--light-background);
+    font-size: 1.2rem; /* Slightly larger font size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+}
+
+.rapperCard:hover {
+    transform: translateY(-0.5rem); /* Subtle upward lift on hover */
+    box-shadow: var(--card-hover-shadow);
+}
+
+/* Ensure card images fill the space */
+.rapperCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent image repetition */
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rapperCard:hover::before {
+    transform: scale(1.1); /* Zoom in on image hover */
+}
