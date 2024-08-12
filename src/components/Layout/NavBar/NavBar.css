@@ -1,0 +1,176 @@
+/* AuthLinks.css */
+:root {
+    /* Define color variables */
+    --primary-background: #282c34; /* Dark background color */
+    --text-color: #4B2C91; /* Dark purple for text */
+    --link-color: #CAB8FF; /* Primary color for links */
+    --event-title-color: #5E4B8C; /* Muted purple for event and post titles */
+    --off-white: #F5F5F5; /* Off-white color for better contrast */
+    --dark-background: #3B2A5D; /* Dark background for featured artists */
+    --title-color: #4B2C91; /* Dark purple for titles */
+    --secondary-text-color: #7D6A9A; /* Lighter purple for paragraphs */
+    --blog-background: #212529; /* Dark background for blog posts */
+    --hover-background: #343a40; /* Darker background on hover */
+    --light-background: #F5F5F5; /* Off-white for module separation */
+    --title-color-dark: #343a40; /* Dark grey for titles */
+}
+
+/* General Navbar Styles */
+.navbar {
+    width: 100vw; /* Ensure the navbar fills the entire viewport width */
+    margin-bottom: 20px;
+    padding: 0.5rem 1rem;
+    background-color: var(--hover-background); /* Use defined hover background color */
+    border-bottom: 2px solid var(--event-title-color); /* Use muted purple for border */
+    position: relative;
+    z-index: 1000;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.75em;
+    color: var(--off-white); /* Use off-white for brand color */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: var(--event-title-color); /* Use muted purple on hover */
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    color: var(--off-white); /* Use off-white for toggler color */
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Navbar Toggler Icon */
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+    color: var(--off-white); /* Use off-white for link color */
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+    color: var(--event-title-color); /* Use muted purple for active link color */
+    background-color: var(--hover-background); /* Use defined hover background color */
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: var(--light-background); /* Use off-white for dropdown background */
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #333; /* Keep dark color for dropdown item text */
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--event-title-color); /* Use muted purple on hover */
+    color: var(--off-white); /* Use off-white for text color */
+}
+
+/* Accessibility Improvements */
+.nav-link:focus,
+.dropdown-item:focus {
+    outline: 3px solid var(--event-title-color); /* Use muted purple for focus outline */
+    outline-offset: 2px;
+}
+
+/* Responsive Adjustments */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+    .navbar-brand {
+        font-size: 2rem; /* Larger brand logo */
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding: 0.75rem 1.25rem; /* Increased padding for larger screens */
+        font-size: 1.1rem;
+    }
+}
+
+/* Medium screens (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbar-nav .nav-item .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Small screens (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem; /* Adds space between items */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: var(--hover-background); /* Match navbar for consistency */
+    }
+
+    .dropdown-item {
+        color: var(--off-white); /* Use off-white for dropdown item text */
+    }
+
+    .dropdown-item:hover {
+        background-color: var(--event-title-color); /* Use muted purple on hover */
+        color: var(--off-white); /* Use off-white for text color */
+    }
+}
+
+/* Extra small screens (up to 479px) */
+@media (max-width: 479px) {
+    .navbar-nav .nav-item .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem; /* Slightly smaller font size for compactness */
+    }
+
+    .dropdown-menu {
+        background-color: var(--hover-background); /* Use defined hover background color */
+    }
+
+    .dropdown-item {
+        color: var(--off-white); /* Use off-white for dropdown item text */
+    }
+
+    .dropdown-item:hover {
+        background-color: var(--event-title-color); /* Use muted purple on hover */
+        color: var(--off-white); /* Use off-white for text color */
+    }
+}

@@ -1,0 +1,48 @@
+.logo {
+    text-align: left;
+    padding: 7px 0;
+}
+
+/* General Logo Styling */
+.logo img {
+    max-width: 100%; /* Make logo responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Logo link styling */
+.logo a {
+    font-size: 1.75em; /* Default font size for logo link */
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Logo link hover effect */
+.logo a:hover {
+    color: #d8302f;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) { /* Mobile */
+    .logo img {
+        width: 80%; /* Smaller size for mobile */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) { /* Tablet */
+    .logo img {
+        width: 70%; /* Adjust size for tablet */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { /* Desktop */
+    .logo img {
+        width: 50%; /* Adjust size for desktop */
+    }
+}
+
+@media (min-width: 993px) { /* Large screens */
+    .logo img {
+        width: 40%; /* Adjust size for large screens */
+    }
+}

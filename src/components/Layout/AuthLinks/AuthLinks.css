@@ -1,0 +1,109 @@
+/* AuthLinks.css */
+:root {
+    /* Define color variables */
+    --primary-background: #282c34; /* Dark background color */
+    --text-color: #4B2C91; /* Dark purple for text */
+    --link-color: #CAB8FF; /* Primary color for links */
+    --event-title-color: #5E4B8C; /* Muted purple for event and post titles */
+    --off-white: #F5F5F5; /* Off-white color for better contrast */
+    --dark-background: #3B2A5D; /* Dark background for featured artists */
+    --title-color: #4B2C91; /* Dark purple for titles */
+    --secondary-text-color: #7D6A9A; /* Lighter purple for paragraphs */
+    --blog-background: #212529; /* Dark background for blog posts */
+    --hover-background: #343a40; /* Darker background on hover */
+    --light-background: #F5F5F5; /* Off-white for module separation */
+    --title-color-dark: #343a40; /* Dark grey for titles */
+}
+
+/* General Styles */
+.login {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Use gap for spacing between items */
+    margin-left: 20px;
+    align-items: center;
+}
+
+/* Auth Links (Login/Register) */
+.login-link,
+.register-link {
+    padding: 10px 20px;
+    color: var(--off-white); /* Use off-white for text color */
+    background-color: var(--text-color); /* Use dark purple for button background */
+    border-radius: 30px;
+    font-size: 14px; /* Increase font size slightly */
+    text-decoration: none;
+    font-weight: 600; /* Add weight for better readability */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px; /* Ensure a minimum clickable area */
+}
+
+/* Hover Effects */
+.login-link:hover,
+.register-link:hover {
+    background-color: var(--event-title-color); /* Use muted purple on hover */
+    color: var(--off-white);
+    transform: scale(1.05); /* Slightly enlarge on hover for better UX */
+}
+
+/* Adjustments for Icons */
+.login-link i,
+.register-link i {
+    margin-right: 8px; /* Add space between the icon and text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* Tablet devices */
+    .login {
+        flex-direction: column; /* Stack the links vertically */
+        gap: 10px;
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .login-link,
+    .register-link {
+        width: 100%; /* Make buttons full-width on smaller screens */
+        padding: 12px 0; /* Adjust padding for full-width buttons */
+        font-size: 16px; /* Slightly increase font size for better readability */
+        border-radius: 25px; /* Reduce border radius for a more modern look */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile devices */
+    .login-link,
+    .register-link {
+        font-size: 14px; /* Further adjust font size for very small screens */
+        padding: 10px 0; /* Adjust padding to fit smaller screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { /* Desktop devices */
+    .login {
+        margin-left: 30px; /* Slightly increase left margin */
+        gap: 15px; /* Maintain consistent spacing */
+    }
+
+    .login-link,
+    .register-link {
+        padding: 12px 25px; /* Adjust padding for desktop */
+        font-size: 15px; /* Increase font size for better readability */
+        border-radius: 30px; /* Keep the rounded corners */
+    }
+}
+
+@media (min-width: 993px) { /* Large screens */
+    .login {
+        margin-left: 40px; /* Increase left margin for larger screens */
+        gap: 20px; /* Increase gap for better spacing */
+    }
+
+    .login-link,
+    .register-link {
+        padding: 15px 30px; /* Increase padding for larger buttons */
+        font-size: 16px; /* Further increase font size for readability */
+        border-radius: 30px; /* Maintain rounded corners */
+    }
+}

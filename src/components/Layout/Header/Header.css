@@ -1,0 +1,111 @@
+:root {
+    /* Define color variables */
+    --primary-background: #282c34; /* Dark background color */
+    --text-color: #4B2C91; /* Dark purple for text */
+    --link-color: #CAB8FF; /* Primary color for links */
+    --event-title-color: #5E4B8C; /* Muted purple for event and post titles */
+    --off-white: #F5F5F5; /* Off-white color for better contrast */
+    --dark-background: #3B2A5D; /* Dark background for featured artists */
+    --title-color: #4B2C91; /* Dark purple for titles */
+    --secondary-text-color: #7D6A9A; /* Lighter purple for paragraphs */
+    --blog-background: #212529; /* Dark background for blog posts */
+    --hover-background: #343a40; /* Darker background on hover */
+    --light-background: #F5F5F5; /* Off-white for module separation */
+    --title-color-dark: #343a40; /* Dark grey for titles */
+}
+
+/* Site Header */
+.site-header {
+    width: 100%;
+    background-color: var(--off-white); /* Use off-white variable */
+    padding: 20px 0; /* Increased padding for more space */
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header Content */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8em; /* Larger logo text */
+    font-weight: bold; /* Bold logo text */
+    color: var(--text-color); /* Dark purple color */
+    text-decoration: none; /* No underline */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Use gap for spacing between links */
+}
+
+.nav-link {
+    color: var(--text-color); /* Dark purple for links */
+    text-decoration: none; /* No underline */
+    font-weight: 500; /* Medium weight for links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-link:hover {
+    color: var(--link-color); /* Change color on hover */
+}
+
+/* Header Right Section */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Use gap for spacing between elements */
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background-color: var(--text-color); /* Dark purple for button */
+    color: var(--off-white); /* Off-white text for contrast */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.cta-button:hover {
+    background-color: var(--link-color); /* Change background on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-right {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack nav links on small screens */
+        gap: 10px; /* Space between links */
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-content {
+        max-width: 1400px; /* Adjust max width for larger screens */
+    }
+}

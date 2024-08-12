@@ -1,0 +1,68 @@
+.paginationControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--dark-background); 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    color: #fff; 
+}
+
+/* Button Styles */
+.paginationControls button {
+    background-color: var(--title-color);
+    color: var(--off-white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 500; 
+}
+
+/* Button Hover Effect */
+.paginationControls button:hover {
+    background-color: var(--hover-background);
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Disabled Button Styles */
+.paginationControls button:disabled {
+    background-color: var(--secondary-text-color);
+    cursor: not-allowed;
+    opacity: 0.6; 
+}
+
+/* Active Page Style */
+.paginationControls .activePage {
+    background-color: var(--hover-background); 
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .paginationControls {
+        flex-direction: column; /* Stack buttons on smaller screens */
+        padding: 15px; /* Increase padding for better touch targets */
+    }
+
+    .paginationControls button {
+        margin: 5px 0; /* Adjust margin for stacked buttons */
+        width: 100%; /* Full width for buttons on smaller screens */
+        padding: 12px; /* Adjust padding for better appearance */
+    }
+}
+
+@media (min-width: 769px) {
+    .paginationControls {
+        padding: 10px 20px; /* Standard padding for larger screens */
+    }
+
+    .paginationControls button {
+        padding: 10px 15px; /* Standard button padding for larger screens */
+    }
+}
