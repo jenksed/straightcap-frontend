@@ -1,0 +1,136 @@
+:root {
+    /* Define color variables */
+    --primary-background: #282c34; /* Dark background color */
+    --text-color: #4B2C91; /* Dark purple for text */
+    --link-color: #CAB8FF; /* Primary color for links */
+    --event-title-color: #5E4B8C; /* Muted purple for event and post titles */
+    --off-white: #F5F5F5; /* Off-white color for better contrast */
+    --dark-background: #3B2A5D; /* Dark background for featured artists */
+    --title-color: #4B2C91; /* Dark purple for titles */
+    --secondary-text-color: #7D6A9A; /* Lighter purple for paragraphs */
+    --blog-background: #212529; /* Dark background for blog posts */
+    --hover-background: #343a40; /* Darker background on hover */
+    --light-background: #F5F5F5; /* Off-white for module separation */
+    --title-color-dark: #343a40; /* Dark grey for titles */
+}
+
+/* General Container Styling */
+.upcomingEvents {
+    width: 100%;
+    padding: 30px 20px;
+    background-color: var(--primary-background); /* Use primary background variable */
+    margin-bottom: 30px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+}
+
+/* Title Styling */
+.upcomingEvents h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--text-color); /* Use text color variable */
+}
+
+/* Event Styling */
+.event {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid var(--dark-background); /* Use dark background variable for border */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.event:last-child {
+    border-bottom: none; /* Remove border for the last event */
+}
+
+.event h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--event-title-color); /* Use event title color variable */
+}
+
+.event p {
+    font-size: 16px;
+    color: var(--secondary-text-color); /* Use secondary text color variable */
+}
+
+.event:hover {
+    background-color: #292d33; /* Slightly lighter grey on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) { /* Mobile devices */
+    .upcomingEvents {
+        padding: 20px 15px;
+    }
+
+    .upcomingEvents h2 {
+        font-size: 20px;
+    }
+
+    .event h3 {
+        font-size: 18px;
+    }
+
+    .event p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) { /* Tablet devices */
+    .upcomingEvents {
+        padding: 25px 20px;
+    }
+
+    .upcomingEvents h2 {
+        font-size: 22px;
+    }
+
+    .event h3 {
+        font-size: 19px;
+    }
+
+    .event p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { /* Desktop devices */
+    .upcomingEvents {
+        padding: 30px 25px;
+    }
+
+    .upcomingEvents h2 {
+        font-size: 24px;
+    }
+
+    .event h3 {
+        font-size: 20px;
+    }
+
+    .event p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 993px) { /* Large screens */
+    .upcomingEvents {
+        padding: 35px 30px;
+    }
+
+    .upcomingEvents h2 {
+        font-size: 26px;
+    }
+
+    .event h3 {
+        font-size: 22px;
+    }
+
+    .event p {
+        font-size: 17px;
+    }
+}

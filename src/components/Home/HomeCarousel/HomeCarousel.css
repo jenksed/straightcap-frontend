@@ -1,0 +1,104 @@
+/* HomeCarousel.css */
+:root {
+    /* Define color variables */
+    --primary-background: #282c34; /* Dark background color */
+    --text-color: #4B2C91; /* Dark purple for text */
+    --link-color: #CAB8FF; /* Primary color for links */
+    --event-title-color: #5E4B8C; /* Muted purple for event and post titles */
+    --off-white: #F5F5F5; /* Off-white color for better contrast */
+    --dark-background: #3B2A5D; /* Dark background for featured artists */
+    --title-color: #4B2C91; /* Dark purple for titles */
+    --secondary-text-color: #7D6A9A; /* Lighter purple for paragraphs */
+    --blog-background: #212529; /* Dark background for blog posts */
+    --hover-background: #343a40; /* Darker background on hover */
+    --light-background: #F5F5F5; /* Off-white for module separation */
+    --title-color-dark: #343a40; /* Dark grey for titles */
+}
+
+/* General Styling for the Carousel */
+.carousel {
+    margin-bottom: 30px;
+}
+
+/* Carousel Images */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the space without distortion */
+}
+
+/* Carousel Caption */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Carousel Control Icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+/* Indicator Styling */
+.carousel-indicators li {
+    background-color: var(--link-color); /* Use defined primary link color */
+}
+
+.carousel-indicators .active {
+    background-color: var(--event-title-color); /* Use defined event title color */
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) { /* Mobile devices */
+    .carousel-caption {
+        font-size: 14px; /* Smaller caption font size for mobile */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px; /* Smaller control icon size */
+        height: 30px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) { /* Tablet devices */
+    .carousel-caption {
+        font-size: 16px; /* Adjusted caption font size for tablets */
+        padding: 12px; /* Moderate padding */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 35px; /* Moderate control icon size */
+        height: 35px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { /* Desktop devices */
+    .carousel-caption {
+        font-size: 18px; /* Caption font size for desktops */
+        padding: 15px; /* Standard padding */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 40px; /* Standard control icon size */
+        height: 40px;
+    }
+}
+
+@media (min-width: 993px) { /* Large screens */
+    .carousel-caption {
+        font-size: 20px; /* Larger caption font size for large screens */
+        padding: 20px; /* Increased padding */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 45px; /* Larger control icon size */
+        height: 45px;
+    }
+}

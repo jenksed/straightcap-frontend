@@ -1,0 +1,156 @@
+:root {
+    /* Define color variables */
+    --primary-background: #282c34; /* Dark background color */
+    --text-color: #4B2C91; /* Dark purple for text */
+    --link-color: #CAB8FF; /* Primary color for links */
+    --event-title-color: #5E4B8C; /* Muted purple for event and post titles */
+    --off-white: #F5F5F5; /* Off-white color for better contrast */
+    --dark-background: #3B2A5D; /* Dark background for featured artists */
+    --title-color: #4B2C91; /* Dark purple for titles */
+    --secondary-text-color: #7D6A9A; /* Lighter purple for paragraphs */
+    --blog-background: #212529; /* Dark background for blog posts */
+    --hover-background: #343a40; /* Darker background on hover */
+    --light-background: #F5F5F5; /* Off-white for module separation */
+    --title-color-dark: #343a40; /* Dark grey for titles */
+}
+
+/* General Container Styling */
+.randomRappersContainer {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: var(--light-background); /* Use off-white for module background */
+    margin-bottom: 30px;
+}
+
+/* Title Styling */
+.randomRappersTitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--title-color-dark); /* Use defined dark grey for title */
+}
+
+/* Artists Grid Styling */
+.randomRappersGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Artist Card Styling */
+.artistCard {
+    flex: 1 1 calc(25% - 20px); /* Adjust for a 4-column layout */
+    max-width: calc(25% - 20px);
+    height: 200px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: var(--off-white); /* Use off-white for text color */
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.artistCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Artist Name Styling */
+.artistName {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for name background */
+    margin: 0;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) { /* Mobile devices */
+    .randomRappersContainer {
+        padding: 30px 15px;
+    }
+
+    .randomRappersTitle {
+        font-size: 20px;
+    }
+
+    .artistCard {
+        flex: 1 1 calc(100% - 20px); /* Single column on mobile */
+        max-width: calc(100% - 20px);
+        height: 150px; /* Reduced height for mobile */
+    }
+
+    .artistName {
+        font-size: 16px; /* Smaller font size for artist names */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) { /* Tablet devices */
+    .randomRappersContainer {
+        padding: 35px 20px;
+    }
+
+    .randomRappersTitle {
+        font-size: 22px;
+    }
+
+    .artistCard {
+        flex: 1 1 calc(50% - 20px); /* Two columns on tablets */
+        max-width: calc(50% - 20px);
+        height: 180px; /* Slightly taller for tablets */
+    }
+
+    .artistName {
+        font-size: 17px; /* Slightly larger font size for artist names */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { /* Desktop devices */
+    .randomRappersContainer {
+        padding: 40px 25px;
+    }
+
+    .randomRappersTitle {
+        font-size: 24px;
+    }
+
+    .artistCard {
+        flex: 1 1 calc(33.33% - 20px); /* Three columns on desktops */
+        max-width: calc(33.33% - 20px);
+        height: 200px; /* Default height */
+    }
+
+    .artistName {
+        font-size: 18px; /* Default font size for artist names */
+    }
+}
+
+@media (min-width: 993px) { /* Large screens */
+    .randomRappersContainer {
+        padding: 45px 30px;
+    }
+
+    .randomRappersTitle {
+        font-size: 26px;
+    }
+
+    .artistCard {
+        flex: 1 1 calc(25% - 20px); /* Four columns on large screens */
+        max-width: calc(25% - 20px);
+        height: 200px; /* Default height */
+    }
+
+    .artistName {
+        font-size: 18px; /* Default font size for artist names */
+    }
+}

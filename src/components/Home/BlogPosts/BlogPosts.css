@@ -1,0 +1,136 @@
+:root {
+    /* Define color variables */
+    --primary-background: #282c34; /* Dark background color */
+    --text-color: #4B2C91; /* Dark purple for text */
+    --link-color: #CAB8FF; /* Primary color for links */
+    --event-title-color: #5E4B8C; /* Muted purple for event and post titles */
+    --off-white: #F5F5F5; /* Off-white color for better contrast */
+    --dark-background: #3B2A5D; /* Dark background for featured artists */
+    --title-color: #4B2C91; /* Dark purple for titles */
+    --secondary-text-color: #7D6A9A; /* Lighter purple for paragraphs */
+    --blog-background: #212529; /* Dark background for blog posts */
+    --hover-background: #343a40; /* Darker background on hover */
+}
+
+/* General Container Styling */
+.blogPosts {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: var(--event-title-color); /* Use muted purple for section background */
+    margin-bottom: 30px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+}
+
+/* Title Styling */
+.blogPosts h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--off-white); /* Off-white color for title text */
+}
+
+/* Blog Post Styling */
+.blogPost {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--blog-background); /* Use defined dark background for posts */
+    border-radius: 8px; /* Rounded corners for posts */
+    border-bottom: 1px solid var(--secondary-text-color); /* Light purple border between posts */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.blogPost:last-child {
+    border-bottom: none; /* Remove border for the last post */
+}
+
+.blogPost h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--off-white); /* Off-white color for post titles */
+}
+
+.blogPost p {
+    font-size: 16px;
+    color: var(--secondary-text-color); /* Lighter purple for content text */
+}
+
+.blogPost:hover {
+    background-color: var(--hover-background); /* Use defined hover background */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) { /* Mobile devices */
+    .blogPosts {
+        padding: 30px 15px;
+    }
+
+    .blogPosts h2 {
+        font-size: 20px;
+    }
+
+    .blogPost h3 {
+        font-size: 18px;
+    }
+
+    .blogPost p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) { /* Tablet devices */
+    .blogPosts {
+        padding: 35px 20px;
+    }
+
+    .blogPosts h2 {
+        font-size: 22px;
+    }
+
+    .blogPost h3 {
+        font-size: 19px;
+    }
+
+    .blogPost p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { /* Desktop devices */
+    .blogPosts {
+        padding: 40px 25px;
+    }
+
+    .blogPosts h2 {
+        font-size: 24px;
+    }
+
+    .blogPost h3 {
+        font-size: 20px;
+    }
+
+    .blogPost p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 993px) { /* Large screens */
+    .blogPosts {
+        padding: 45px 30px;
+    }
+
+    .blogPosts h2 {
+        font-size: 26px;
+    }
+
+    .blogPost h3 {
+        font-size: 22px;
+    }
+
+    .blogPost p {
+        font-size: 17px;
+    }
+}
