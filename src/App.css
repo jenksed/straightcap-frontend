@@ -1,3 +1,16 @@
+:root {
+  /* Define color variables */
+  --primary-background: #282c34; /* Dark background color */
+  --text-color: #4B2C91; /* Dark purple for text */
+  --link-color: #CAB8FF; /* Primary color for links */
+  --event-title-color: #5E4B8C; /* Muted purple for event and post titles */
+  --off-white: #F5F5F5; /* Off-white color for better contrast */
+  --dark-background: #3B2A5D; /* Dark background for featured artists */
+  --title-color: #4B2C91; /* Dark purple for titles */
+  --secondary-text-color: #7D6A9A; /* Lighter purple for paragraphs */
+}
+
+/* General App Styles */
 .App {
   text-align: center;
 }
@@ -13,19 +26,21 @@
   }
 }
 
+/* Header Styling */
 .App-header {
-  background-color: #282c34;
+  background-color: var(--primary-background); /* Use variable */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-color); /* Use variable */
 }
 
+/* Link Styling */
 .App-link {
-  color: #61dafb;
+  color: var(--link-color); /* Use variable */
 }
 
 @keyframes App-logo-spin {
