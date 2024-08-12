@@ -1,23 +1,25 @@
-// HomePage.js
 import React from 'react';
-import './HomePage.css'; // Ensure this CSS contains the grid styling.
-import Layout from '../../components/Layout/Layout'; // Make sure the path is correct.
-import RandomRappers from '../../components/Home/RandomRappers';
-import BlogPosts from '../../components/Home/BlogPosts';
-import UpcomingEvents from '../../components/Home/UpcomingEvents';
+import './HomePage.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import Layout from '../../components/Layout/Layout';
+import RandomRappers from '../../components/Home/RandomRappers/RandomRappers';
+import BlogPosts from '../../components/Home/BlogPosts/BlogPosts';
+import UpcomingEvents from '../../components/Home/UpcomingEvents/UpcomingEvents';
+import HomeCarousel from '../../components/Home/HomeCarousel/HomeCarousel';
 
 const HomePage = () => {
   return (
     <Layout>
-      <div className="homeGrid">
-        <div className="gridRappers">
-          <RandomRappers />
-        </div>
-        <div className="gridBlogs">
-          <BlogPosts />
-        </div>
-        <div className="gridEvents">
-          <UpcomingEvents />
+      <HomeCarousel />
+      <div className="content-wrapper"> {/* Added wrapper for margins */}
+        <div className="row">
+          <div className="col-md-8">
+            <RandomRappers />
+            <BlogPosts />
+          </div>
+          <div className="col-md-4">
+            <UpcomingEvents />
+          </div>
         </div>
       </div>
     </Layout>
