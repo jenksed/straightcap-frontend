@@ -1,30 +1,34 @@
-// src/components/templates/ArtistPageTemplate.js
 import React from 'react';
-import ArtistBio from '../../Artist/ArtistBio'; // Assuming you've made these components more generic
+import ArtistBio from '../../Artist/ArtistBio';
 import ArtistImage from '../../Artist/ArtistImage';
-import MusicLinks from '../../Artist/MusicLinks';
-import BlogLinks from '../../Artist/BlogLinks';
-import './ArtistPageTemplate.css'; // Create this CSS file for styling
+import MusicLinks from '../../Artist/MusicLinks/MusicLinks';
+import BlogLinks from '../../Artist/BlogLinks/BlogLinks';
+import './ArtistPageTemplate.css'; 
 
 const ArtistPageTemplate = ({ artist }) => {
   if (!artist) {
     return <div>Loading...</div>; // Fallback in case artist data is not available
   }
 
+  console.log(artist); // Check the artist object
+
   return (
     <div className="artistPageTemplate">
       <div className="artistHeader">
         <ArtistImage image={artist.image} />
-        <h2>{artist.name}</h2>
+        <div className="artistInfo">
+          <h2>{artist.name}</h2>
+          {artist.bio && <ArtistBio bio={artist.bio} />}
+        </div>
       </div>
-      <div className="artistContent">
-        {artist.bio && <ArtistBio bio={artist.bio} />}
+      <div className="musicLinks">
         {artist.musicLinks && <MusicLinks links={artist.musicLinks} />}
+      </div>
+      <div className="blogLinks">
         {artist.blogLinks && <BlogLinks links={artist.blogLinks} />}
       </div>
     </div>
   );
 };
-
 
 export default ArtistPageTemplate;

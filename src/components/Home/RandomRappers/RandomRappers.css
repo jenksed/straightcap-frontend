@@ -14,17 +14,27 @@
     --title-color-dark: #343a40; /* Dark grey for titles */
 }
 
-/* General Container Styling */
+/* Random Rappers Module */
 .randomRappersContainer {
-    width: 100%;
-    padding: 40px 20px;
-    background-color: var(--light-background); /* Use off-white for module background */
-    margin-bottom: 30px;
+    width: 100%; /* Full width */
+    padding: 20px; /* Adjust padding for spacing */
+    background-color: var(--light-background); /* Off-white background for the module */
+    margin-top: 0; /* Remove margin on top to stick just below the navbar */
 }
+
+/* General Container Styling */
+.container {
+    max-width: none; /* Remove max-width to allow full-width */
+    margin: 0; /* Remove margins for full width */
+    padding: 0; /* Remove padding for full width */
+}
+
+/* Existing styles remain unchanged... */
+
 
 /* Title Styling */
 .randomRappersTitle {
-    text-align: center;
+    text-align: left; /* Align title to the left */
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -32,18 +42,20 @@
 }
 
 /* Artists Grid Styling */
+/* Artists Grid Styling */
 .randomRappersGrid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    display: grid; /* Use CSS grid for layout */
+    grid-template-columns: repeat(3, 150px); /* 3 columns of fixed width */
+    gap: 20px; /* Space between items */
 }
 
+
+/* Artist Card Styling */
 /* Artist Card Styling */
 .artistCard {
-    flex: 1 1 calc(25% - 20px); /* Adjust for a 4-column layout */
-    max-width: calc(25% - 20px);
-    height: 200px;
+    position: relative;
+    width: 150px; /* Set fixed width */
+    height: 150px; /* Set fixed height */
     border-radius: 8px;
     background-size: cover;
     background-position: center;
@@ -57,12 +69,8 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.artistCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
 
-/* Artist Name Styling */
+/* To ensure the artist name is centered */
 .artistName {
     text-align: center;
     width: 100%;
@@ -70,8 +78,14 @@
     margin: 0;
     padding: 10px;
     border-radius: 0 0 8px 8px;
-    font-size: 18px;
+    font-size: 16px; /* Smaller font size for better fit */
     font-weight: bold;
+}
+
+/* Hover Effects */
+.artistCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Styles */
@@ -84,10 +98,12 @@
         font-size: 20px;
     }
 
+    .randomRappersGrid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
     .artistCard {
-        flex: 1 1 calc(100% - 20px); /* Single column on mobile */
-        max-width: calc(100% - 20px);
-        height: 150px; /* Reduced height for mobile */
+        height: auto; /* Auto height for mobile */
     }
 
     .artistName {
@@ -104,10 +120,8 @@
         font-size: 22px;
     }
 
-    .artistCard {
-        flex: 1 1 calc(50% - 20px); /* Two columns on tablets */
-        max-width: calc(50% - 20px);
-        height: 180px; /* Slightly taller for tablets */
+    .randomRappersGrid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
     }
 
     .artistName {
@@ -124,10 +138,8 @@
         font-size: 24px;
     }
 
-    .artistCard {
-        flex: 1 1 calc(33.33% - 20px); /* Three columns on desktops */
-        max-width: calc(33.33% - 20px);
-        height: 200px; /* Default height */
+    .randomRappersGrid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on desktops */
     }
 
     .artistName {
@@ -144,13 +156,7 @@
         font-size: 26px;
     }
 
-    .artistCard {
-        flex: 1 1 calc(25% - 20px); /* Four columns on large screens */
-        max-width: calc(25% - 20px);
-        height: 200px; /* Default height */
-    }
-
-    .artistName {
-        font-size: 18px; /* Default font size for artist names */
+    .randomRappersGrid {
+        grid-template-columns: repeat(3, 1fr); /* Keep three columns */
     }
 }

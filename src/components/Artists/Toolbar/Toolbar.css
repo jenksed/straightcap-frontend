@@ -50,6 +50,31 @@
     box-shadow: 0 0 0 2px var(--toolbar-border-color); /* Add subtle glow on focus */
 }
 
+/* Add this to Toolbar.css */
+
+/* Letter matrix styling */
+.letterMatrix {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Add some space above */
+}
+
+.letterButton {
+    padding: 10px 15px; 
+    border: none;
+    border-radius: 5px; 
+    background-color: var(--toolbar-border-color);
+    color: #fff; /* Change text color to white for contrast */
+    cursor: pointer; 
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.letterButton:hover {
+    background-color: #5e3a8e; /* Darker color on hover */
+}
+
+
 /* Responsive padding adjustments (optional) */
 @media (max-width: 767px) {
     .toolbar {

@@ -8,11 +8,12 @@ function ArtistGrid({ filteredArtists = [] }) {
         <div className="artistsContainer"> {/* Use artistsContainer for grid layout */}
             {filteredArtists.map((artist) => (
                 <Link 
-                    to={`/artists/${artist.slug.current}`} 
-                    key={artist._id} 
-                    className="rapperCard"
-                    style={{ backgroundImage: artist.image ? `url(${urlFor(artist.image).url()})` : 'none' }}
-                >
+                to={`/artists/${artist.slug.current}`} 
+                key={artist._id} 
+                className="rapperCard"
+                style={{ backgroundImage: artist.image ? `url(${urlFor(artist.image).url()})` : 'none' }}
+            >
+            
                     <h2 className="rapperName">{artist.name}</h2>
                 </Link>
             ))}

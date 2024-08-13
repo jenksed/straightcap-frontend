@@ -37,10 +37,11 @@
     opacity: 0.6; 
 }
 
-/* Active Page Style */
-.paginationControls .activePage {
-    background-color: var(--hover-background); 
-    font-weight: bold;
+/* Current Page Style */
+.currentPage {
+    margin: 0 10px; /* Space around the current page number */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    color: var(--off-white); /* Set color to match theme */
 }
 
 /* Responsive Styles */

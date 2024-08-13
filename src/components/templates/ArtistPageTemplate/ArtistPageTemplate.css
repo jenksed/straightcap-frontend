@@ -1,36 +1,63 @@
-/* ArtistPageTemplate.css */
-
 .artistPageTemplate {
     display: flex;
-    flex-direction: column; /* Arrange header and content vertically on smaller screens */
-    gap: 2rem; /* Add spacing between header and content */
-  }
-  
-  .artistHeader {
-    text-align: center; /* Center the artist name */
-  }
-  
-  .artistHeader h2 {
+    flex-direction: column; /* Stack rows vertically */
+    margin: 20px; /* Add some margin for spacing */
+    background-color: var(--light-background); /* Add a light background color for contrast */
+    padding: 20px; /* Add padding for better spacing within the template */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.artistHeader {
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.artistInfo {
+    margin-left: 20px; /* Space between the image and text */
+    display: flex;
+    flex-direction: column; /* Stack name and bio vertically */
+}
+
+.artistImage {
+    max-width: 100%; /* Set max width */
+    max-height: 150px; /* Limit image height to 150px */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.artistHeader h2 {
     margin-top: 1rem; /* Add some space above the name */
-  }
-  
-  .artistContent {
-    /* Add styling for the content area as needed */
-  }
-  
-  /* Media query for larger screens */
-  @media (min-width: 768px) { /* Adjust breakpoint as needed */
-    .artistPageTemplate {
-      flex-direction: row; /* Arrange header and content side-by-side on larger screens */
-    }
-  
+    font-size: 1.8rem; /* Increase font size for prominence */
+    color: var(--title-color); /* Use a theme color for consistency */
+}
+
+.musicLinks, .blogLinks {
+    margin-top: 10px; /* Add space above music and blog links */
+    background-color: var(--secondary-background); /* Distinct background for links section */
+    padding: 15px; /* Padding for the links section */
+    border-radius: 8px; /* Rounded corners for links section */
+}
+
+.musicLinks h3, .blogLinks h3 {
+    margin-bottom: 10px; /* Space below section titles */
+    font-size: 1.5rem; /* Consistent title size */
+    color: var(--title-color); /* Use a theme color for consistency */
+}
+
+@media (max-width: 768px) {
     .artistHeader {
-      flex: 0 0 300px; /* Set a fixed width for the header */
-      margin-right: 2rem; /* Add space between header and content */
+        flex-direction: column; /* Stack image and info vertically on smaller screens */
+        align-items: center; /* Center align items */
     }
-  
-    .artistContent {
-      flex: 1; /* Allow the content area to grow and take available space */
+
+    .artistInfo {
+        margin-left: 0; /* Reset margin for smaller screens */
+        text-align: center; /* Center text on smaller screens */
     }
-  }
-  
+
+    .artistPageTemplate {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}

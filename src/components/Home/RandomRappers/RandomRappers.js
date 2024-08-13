@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import client from '../../../client';
 import imageUrlBuilder from '@sanity/image-url';
-import './RandomRappers.css'; // Import the CSS file
+import './RandomRappers.css';
 
 const builder = imageUrlBuilder(client);
 
@@ -17,7 +17,7 @@ const RandomRappers = () => {
         const query = '*[_type == "artist"][0...50]';
         client.fetch(query)
             .then(data => {
-                setArtists(shuffleArray(data).slice(0, 4));
+                setArtists(shuffleArray(data).slice(0, 9)); // Fetch 9 artists
             })
             .catch(err => console.error(err));
     }, []);

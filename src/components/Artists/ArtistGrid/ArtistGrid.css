@@ -17,11 +17,11 @@
 
 /* Individual rapper card styles */
 .rapperCard {
-    height: 300px; /* Increased height for larger images and text */
+    height: 300px; /* Fixed height for card */
     display: flex;
     flex-direction: column; /* Arrange content vertically */
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: flex-end; /* Align text at the bottom */
+    align-items: center; /* Center text horizontally */
     background-color: var(--dark-background); /* Fallback color if image fails to load */
     color: var(--off-white);
     text-decoration: none;
@@ -55,12 +55,13 @@
 .rapperCard::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover; /* Ensure the image covers the entire area */
-    background-position: center;
+    top: 0; /* Start at the top */
+    left: 0; /* Start at the left */
+    width: 100%; /* Cover full width */
+    height: 100%; /* Cover full height */
+    background-image: inherit; /* Inherit background image */
+    background-size: 100% 100%; /* Stretch to cover full width and height */
+    background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent image repetition */
     z-index: 1;
     transition: transform 0.3s ease-in-out;
