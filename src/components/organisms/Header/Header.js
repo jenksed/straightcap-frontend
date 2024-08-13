@@ -1,9 +1,9 @@
 import React from 'react';
 import './Header.css'; 
 import NavBar from '../NavBar/NavBar';
-import Logo from '../Logo/Logo';
-import SocialIcons from '../SocialIcons/SocialIcons';
-import AuthLinks from '../AuthLinks/AuthLinks';
+import Logo from '../../Layout/Logo/Logo';
+import SocialIcons from '../../Layout/SocialIcons/SocialIcons';
+import AuthLinks from '../../Layout/AuthLinks/AuthLinks';
 
 const Header = () => {
     return (

@@ -1,7 +1,7 @@
 // RegistrationPage.js
 import React, { useState, useEffect } from 'react';
 import Layout from '../../components/Layout/Layout';
-import Modal from '../../components/Layout/Modal';
+import Modal from '../../components/shared/Modal';
 
 const RegistrationPage = () => {
     const [isModalOpen, setModalOpen] = useState(false);

@@ -1,6 +1,6 @@
 // Layout Component
 import React from 'react';
-import Header from './Header/Header';
+import Header from '../organisms/Header/Header';
 import Footer from './Footer/Footer';
 
 const Layout = ({ children }) => {
