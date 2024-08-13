@@ -1,14 +1,12 @@
-// src/components/atoms/ArtistImage.js
 import React from 'react';
-import { urlFor } from '../../../client'; // Adjust import path if necessary
+import './ArtistImage.css'; // Ensure you have the CSS for styling
 
 const ArtistImage = ({ image }) => {
-    const imageUrl = image ? urlFor(image).url() : 'none'; // Handle missing images gracefully
-
     return (
-        <div 
-            className="artistImage" 
-            style={{ backgroundImage: `url(${imageUrl})` }} 
+        <img
+            src={image} // Ensure the image prop is being used here
+            alt="Artist"
+            className="artistImage" // Add a class for styling
         />
     );
 };

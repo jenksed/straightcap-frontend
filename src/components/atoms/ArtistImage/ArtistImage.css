@@ -1,0 +1,8 @@
+.artistImage {
+    max-height: 150px; /* Set max height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area */
+    display: block; /* Remove any extra space */
+    margin-right: 20px; /* Add some spacing to the right of the image */
+}
