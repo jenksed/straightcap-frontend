@@ -1,0 +1,31 @@
+.musicLinks {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    margin-top: 10px; /* Space above the music links */
+}
+
+.musicLink {
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline from links */
+    color: var(--dark-purple); /* Dark purple color */
+    padding: 10px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.musicLink:hover {
+    background-color: rgba(128, 0, 128, 0.1); /* Lighten the background on hover */
+}
+
+.musicIcon {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.2rem; /* Adjust icon size */
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+    .musicLinks {
+        align-items: center; /* Center links on smaller screens */
+    }
+}

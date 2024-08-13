@@ -1,0 +1,18 @@
+.blogLinks {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    margin-top: 10px; /* Space above the blog links */
+  }
+  
+  .blogLink {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--dark-purple); /* Dark purple color */
+    padding: 10px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .blogLink:hover {
+    background-color: rgba(128, 0, 128, 0.1); /* Lighten the background on hover */
+  }
+  
