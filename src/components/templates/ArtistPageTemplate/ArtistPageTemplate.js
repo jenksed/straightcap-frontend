@@ -1,16 +1,14 @@
 import React from 'react';
-import ArtistBio from '../../Artist/ArtistBio';
+import ArtistBio from '../../atoms/ArtistBio';
 import ArtistImage from '../../Artist/ArtistImage';
-import MusicLinks from '../../molecules/BlogLinks/MusicLinks/MusicLinks';
+import MusicLinks from '../../molecules/MusicLinks/MusicLinks';
 import BlogLinks from '../../molecules/BlogLinks/BlogLinks';
 import './ArtistPageTemplate.css'; 
 
 const ArtistPageTemplate = ({ artist }) => {
   if (!artist) {
-    return <div>Loading...</div>; // Fallback in case artist data is not available
+    return <div>Loading...</div>; // Fallback for loading state
   }
-
-  console.log(artist); // Check the artist object
 
   return (
     <div className="artistPageTemplate">

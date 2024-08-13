@@ -4,29 +4,26 @@
   grid-template-areas:
     "image header"
     "image bio"
-    "image music"; /* Adjust grid layout for music */
+    "image music"; 
   gap: 2rem; 
   padding: 2rem; 
   max-width: 1200px;
-  margin: 0 auto; /* Center the container horizontally */
+  margin: 0 auto; 
   background-color: #fff; 
-  border-radius: 1rem; /* Add rounded corners to the container itself */
+  border-radius: 1rem; 
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
 
-
-
 .artistImage {
   grid-area: image;
-  width: auto; /* Take full width of the grid area */
-  max-height:500px !important;
-  aspect-ratio: 4 / 3; /* Maintain a 4:3 aspect ratio */
+  width: auto; 
+  max-height: 500px !important;
+  aspect-ratio: 4 / 3; 
   border-radius: 1rem; 
   box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
-  overflow: hidden; /* Hide any overflow if the image doesn't fit perfectly */
-  object-fit: cover; /* Ensures the image covers the entire area */
+  overflow: hidden; 
+  object-fit: cover; 
 }
-
 
 .rapperCard::before {
   content: '';
@@ -37,17 +34,16 @@
   bottom: 0;
   background-size: cover; 
   background-position: center;
-  background-repeat:   
- no-repeat; 
+  background-repeat: no-repeat; 
   z-index: 1;
   transition: transform 0.3s ease-in-out;
 }
 
 .artistBio {
   grid-area: bio;
-  background-color: #f5f5f5; /* Slightly lighter background */
-  padding: 1.5rem; /* Adjust padding */
-  border-radius: 0.5rem; /* Smaller border radius */
+  background-color: #f5f5f5; 
+  padding: 1.5rem; 
+  border-radius: 0.5rem; 
   font-size: 1.1em; 
   line-height: 1.6; 
   color: #444; 
@@ -55,34 +51,34 @@
 
 .musicSection {
   grid-area: music;
-  padding: 1.5rem; /* Adjust padding */
+  padding: 1.5rem; 
   background-color: #f0f0f0;
-  border-radius: 0.5rem; /* Smaller border radius */
+  border-radius: 0.5rem; 
   display: flex;
   flex-direction: column;
 }
 
 .musicLinks a {
-  display: flex; /* Use flexbox for better alignment */
-  align-items: center; /* Vertically center icon and text */
-  margin-bottom: 1rem; /* Increase spacing between links */
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 1rem; 
   text-decoration: none;
-  color: #007bff; /* Use a standard blue link color */
-  font-weight: 500; /* Slightly less bold */
-  transition: color 0.3s ease; /* Add color transition on hover */
+  color: #007bff; 
+  font-weight: 500; 
+  transition: color 0.3s ease; 
 }
 
 .musicLinks a:hover {
-  color: #0056b3; /* Darker blue on hover */
+  color: #0056b3; 
 }
 
-.musicLinks a svg { /* Style the icon */
-  margin-right: 0.5rem; /* Add space between icon and text */
-  width: 1.2em; /* Adjust icon size as needed */
+.musicLinks a svg { 
+  margin-right: 0.5rem; 
+  width: 1.2em; 
   height: 1.2em;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .artistPageContainer {
     grid-template-columns: 1fr; 
@@ -100,6 +96,6 @@
 
   .artistImage {
     max-width: 100%; 
-    margin: 1rem auto; /* Add margin top and bottom for spacing */
+    margin: 1rem auto; 
   }
 }
