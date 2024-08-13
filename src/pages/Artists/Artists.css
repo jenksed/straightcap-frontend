@@ -1,20 +1,20 @@
 /* src/pages/Artists/Artists.css */
 .artistsPage {
   display: flex;
-  flex-direction: column; /* Stack toolbar and grid vertically on smaller screens */
+  flex-direction: column; /* Stack toolbar and grid vertically */
 }
 
-@media (min-width: 768px) { /* Adjust breakpoint as needed */
+@media (min-width: 768px) {
   .artistsPage {
-    flex-direction: row; /* Arrange toolbar and grid side-by-side on larger screens */
+    flex-direction: row; /* Arrange toolbar and grid side-by-side */
   }
 
-  .artistsPage > * { /* Style direct children of .artistsPage */
-    flex: 1; /* Allow both toolbar and grid to grow and take available space */
+  .artistsPage > * {
+    flex: 1; /* Allow both toolbar and grid to grow */
   }
 
   .artistsPage > .toolbar {
-    max-width: 300px; /* Limit toolbar width on larger screens */
+    max-width: 300px; /* Limit toolbar width */
     margin-right: 20px; 
   }
 }
