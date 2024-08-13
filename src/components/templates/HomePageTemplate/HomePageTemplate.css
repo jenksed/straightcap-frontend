@@ -1,0 +1,165 @@
+:root {
+    /* Define color variables */
+    --primary-background: #282c34; /* Dark background color */
+    --text-color: #4B2C91; /* Dark purple for text */
+    --link-color: #CAB8FF; /* Primary color for links */
+    --event-title-color: #5E4B8C; /* Muted purple for event and post titles */
+    --off-white: #F5F5F5; /* Off-white color for better contrast */
+    --dark-background: #3B2A5D; /* Dark background for featured artists */
+    --title-color: #4B2C91; /* Dark purple for titles */
+    --secondary-text-color: #7D6A9A; /* Lighter purple for paragraphs */
+    --blog-background: #212529; /* Dark background for blog posts */
+    --hover-background: #343a40; /* Darker background on hover */
+    --light-background: #F5F5F5; /* Off-white for module separation */
+    --title-color-dark: #343a40; /* Dark grey for titles */
+}
+
+/* Container for centering content */
+.container {
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Centering */
+    padding: 0 15px; /* Padding for all sides */
+    margin-left: 15%; /* 15% margin on the left */
+    margin-right: 15%; /* 15% margin on the right */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    margin: 0 2em; /* Margin for whitespace */
+    padding: 20px; /* Optional padding for whitespace inside */
+}
+
+/* Row spacing */
+.row {
+    margin-bottom: 30px; /* Spacing between rows */
+}
+
+/* Columns styling */
+.col-md-8,
+.col-md-4 {
+    padding: 15px; /* Padding for columns */
+}
+
+/* Featured Artists section */
+.featured-artists {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    margin-bottom: 40px; /* Space below featured artists */
+    padding: 20px; /* Added padding for whitespace */
+    border-radius: 10px; /* Rounded corners */
+    background-color: var(--primary-background); /* Dark background for section */
+}
+
+.featured-artists div {
+    flex: 1 1 calc(20% - 20px); /* Responsive item size */
+    margin: 10px; /* Space between items */
+    background-color: var(--dark-background); /* Dark background */
+    color: var(--off-white); /* Off-white text */
+    text-align: center; /* Center text */
+    padding: 15px; /* Padding inside cards */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Flex for inner content */
+    align-items: flex-end; /* Align text to bottom */
+    justify-content: center; /* Center items */
+    position: relative; /* Positioning context */
+}
+
+.featured-artists div h4 {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for titles */
+    width: 100%; /* Full width for title */
+    margin: 0; /* No margin */
+    padding: 10px; /* Padding for titles */
+    color: var(--off-white); /* Off-white for title text */
+}
+
+/* Blog Posts and Events styling */
+.latest-blog-posts,
+.upcoming-events {
+    background-color: var(--primary-background); /* Dark background */
+    padding: 20px; /* Padding for sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 30px; /* Space below sections */
+    margin-top: 20px; /* Space above sections for whitespace */
+}
+
+.latest-blog-posts h2,
+.upcoming-events h2 {
+    margin-bottom: 20px; /* Space below titles */
+    font-size: 24px; /* Title size */
+    color: var(--title-color); /* Dark text */
+}
+
+.latest-blog-posts p,
+.upcoming-events p {
+    color: var(--secondary-text-color); /* Medium grey text */
+    margin-bottom: 10px; /* Space below paragraphs */
+}
+
+.latest-blog-posts .post,
+.upcoming-events .event {
+    margin-bottom: 20px; /* Space between posts/events */
+}
+
+.latest-blog-posts .post-title,
+.upcoming-events .event-title {
+    font-size: 18px; /* Post/event title size */
+    font-weight: bold; /* Bold titles */
+    margin-bottom: 5px; /* Space below titles */
+    color: var(--event-title-color); /* Muted purple for titles */
+}
+
+/* Responsive styles */
+@media (min-width: 1201px) { /* Large screens */
+    .featured-artists div {
+        flex: 1 1 calc(20% - 20px); /* 5 items in a row */
+    }
+}
+
+@media (max-width: 1200px) {
+    .featured-artists div {
+        flex: 1 1 calc(25% - 20px); /* 4 items in a row */
+    }
+}
+
+@media (max-width: 992px) {
+    .featured-artists div {
+        flex: 1 1 calc(33.33% - 20px); /* 3 items in a row */
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-artists div {
+        flex: 1 1 calc(50% - 20px); /* 2 items in a row */
+    }
+
+    .col-md-8,
+    .col-md-4 {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-artists {
+        flex-direction: column; /* Stack items on very small screens */
+    }
+
+    .featured-artists div {
+        flex: 1 1 100%; /* Full width for items */
+        margin: 5px 0; /* Reduced margin for stacking */
+    }
+}
+
+/* Hover Effects */
+.featured-artists div:hover {
+    background-color: var(--hover-background); /* Change background on hover */
+    transform: scale(1.02); /* Slightly scale up on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.latest-blog-posts .post:hover,
+.upcoming-events .event:hover {
+    background-color: var(--hover-background); /* Change background on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
