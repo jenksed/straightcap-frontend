@@ -1,8 +1,8 @@
 import React from 'react';
 import ArtistBio from '../../Artist/ArtistBio';
 import ArtistImage from '../../Artist/ArtistImage';
-import MusicLinks from '../../Artist/MusicLinks/MusicLinks';
-import BlogLinks from '../../Artist/BlogLinks/BlogLinks';
+import MusicLinks from '../../molecules/BlogLinks/MusicLinks/MusicLinks';
+import BlogLinks from '../../molecules/BlogLinks/BlogLinks';
 import './ArtistPageTemplate.css'; 
 
 const ArtistPageTemplate = ({ artist }) => {
